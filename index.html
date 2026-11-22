@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIVA Open University - GPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>MIVA OPEN UNIVERSITY</h1>
+            <p class="subtitle">Student Semester GPA Calculator (5.0 Scale)</p>
+        </header>
+
+        <main>
+            <div class="controls-top">
+                <button type="button" id="add-course-btn" class="btn btn-secondary">+ Add Course</button>
+                <button type="button" id="reset-btn" class="btn btn-danger">Reset All</button>
+            </div>
+
+            <div class="table-responsive">
+                <table id="gpa-table">
+                    <thead>
+                        <tr>
+                            <th>Course Code / Title</th>
+                            <th>Credit Units</th>
+                            <th>Grade</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="course-list">
+                        <!-- Dynamic rows will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="calculate-section">
+                <button type="button" id="calculate-btn" class="btn btn-primary">Calculate GPA</button>
+            </div>
+
+            <div id="result-card" class="result-card hidden">
+                <h2>Semester Summary</h2>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-label">Total Credit Units</span>
+                        <span class="stat-value" id="total-units">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Total Quality Points</span>
+                        <span class="stat-value" id="total-points">0</span>
+                    </div>
+                    <div class="stat-box highlight">
+                        <span class="stat-label">Calculated GPA</span>
+                        <span class="stat-value" id="gpa-value">0.00</span>
+                    </div>
+                </div>
+                <p id="standing-text" class="standing-text"></p>
+            </div>
+        </main>
+
+        <footer>
+            <p>@2026 Taiwo Wunderkind Enijuni</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
